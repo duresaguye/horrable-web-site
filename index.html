@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horrible Design</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: hsl(0, 100%, 50%);
+            color: #990000;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            animation: blink 1s infinite;
+            margin: 0;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                color: #990000;
+            }
+            50% {
+                color: #00ff00;
+            }
+        }
+
+        .section {
+            
+            animation: shake 0.8s infinite, colorChange 2s infinite;
+        }
+
+        @keyframes shake {
+            0%, 10% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(5px, 5px);
+            }
+            50% {
+                transform: translate(-5px, -5px);
+            }
+            75% {
+                transform: translate(5px, -5px);
+            }
+            100% {
+                transform: translate(-5px, 5px);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #990000;
+            }
+            25% {
+                color: #ffcc00;
+            }
+            50% {
+                color: #00f;
+            }
+            75% {
+                color: #ff00ff;
+            }
+            10% {
+                color: #990000;
+            }
+        }
+
+        .btn-danger {
+            background-color: #666;
+            color: #fff;
+            padding: 0px 0px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.1s;
+        }
+
+        .btn-danger:hover {
+            background-color: #990000;
+            transform: rotate(100deg);
+            animation: rotateButton 0.5s infinite;
+        }
+
+        @keyframes rotateButton {
+            0% {
+                transform: rotate(20deg);
+            }
+            50% {
+                transform: rotate(-20deg);
+            }
+            100% {
+                transform: rotate(50deg);
+            }
+        }
+
+        .form-group {
+            margin-top: 0px;
+        }
+
+        .form-control {
+            border: 2px solid #f00;
+            border-radius: 15px;
+            font-size: 20px;
+            background-color: #ffcc00;
+            color: #00f;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .unreadable-content {
+            font-size: 36px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.2;
+            animation: flipInX 0.5s infinite;
+        }
+
+        @keyframes flipInX {
+            0% {
+                transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+            100% {
+                transform: perspective(400px) rotateX(0deg);
+                opacity: 0.5;
+            }
+        }
+
+        .agonizing-link {
+            color: hwb(0 2% 78%);
+            text-decoration: none;
+            border-bottom: 10px dashed #990000;
+            transition: color 0.5s;
+        }
+
+        .agonizing-link:hover {
+            color: #990000;
+            font-size: 100px;
+            animation: jump 0.5s infinite;
+        }
+
+        @keyframes jump {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .confusing-button {
+            background-color: #00f;
+            color: #ffcc00;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+
+        .confusing-button:hover {
+            background-color: #990000;
+            transform: scale(2);
+            animation: rotateButton 0.5s infinite;
+        }
+
+        .fun-button {
+            background-color: #ff00ff;
+            color: #00ff00;
+            padding: 50px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+
+        .fun-button:hover {
+            background-color: #ffcc00;
+            box-shadow: 0 0 100px #990000;
+            animation: rotateButton 0.5s infinite;
+        }
+
+        .annoying-button {
+            background-color: #ffcc00;
+            color: #990000;
+            padding: 10px 50px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+
+        .annoying-button:hover {
+            background-color: #ff0000;
+            color: #fff;
+            border: 20px solid #fff;
+            animation: moveAround 2s infinite;
+        }
+
+        @keyframes moveAround {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            15% {
+                transform: translate(10px, 10px);
+            }
+            20% {
+                transform: translate(-10px, -10px);
+            }
+            55% {
+                transform: translate(10px, -10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h1>Welcome to the Hell Website</h1>
+        <p>This is your painful, animated, and colorful experience!</p>
+        <button class="btn btn-danger" onclick="annoy()">cilck Me babe!</button>
+        <div class="form-group">
+            <label for="name">Enter your name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Painful Name">
+            <button class="btn btn-danger" onclick="annoyUser()">Submit</button>
+        </div>
+    </div>
+
+    <div class="section" style="background-color: #666;">
+        <h2 class="agonizing-link">Unbearable Section</h2>
+        <p class="agonizing-content">This section is designed to induce maximum pain and discomfort. Prepare yourself for a journey of endless frustration and confusion. Did you know that the average person spends 6 months of their life waiting for red lights to turn green? You're probably wasting more time here! In fact, reading this message is a waste of your precious time. Congratulations!</p>
+        <a href="#" class="agonizing-link">Click here for more</a>
+    </div>
+
+    <div class="section" style="background-color: #ffcc00;">
+        <h2 class="agonizing-link">More Agonizing Section</h2>
+        <p class="agonizing-content unreadable-content">Prepare for an onslaught of unbearable content. Did you know that the early bird might get the worm, but the second mouse gets the cheese? You're the second mouse! This paragraph is intentionally long and painful to read. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="annoying-button" onmouseover="beAnnoying()">click me!</button>
+    </div>
+
+    <div class="section" style="background-color: #666;">
+        <h2 class="agonizing-link">Endless Confusion Section</h2>
+        <p class="agonizing-content unreadable-content">In this section, we've ramped up the confusion. Why did the programmer quit his job? Because he didn't get arrays! Prepare yourself for more mind-boggling content. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque commodo odio vel malesuada interdum.</p>
+        <button class="confusing-button" onclick="confuse()">Cilck plz!</button>
+    </div>
+
+    <div class="section" style="background-color: #ffcc00;">
+        <h2 class="agonizing-link">Fun Section</h2>
+        <p class="agonizing-content">Click the button below for a fun surprise! Did you hear about the cheese factory that exploded? There was nothing left but de-brie. Let's add some fun to your life, or at least what we consider fun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget dolor eu quam feugiat vestibulum. Proin non ligula eu augue pretium bibendum. Nulla facilisi. Vestibulum eu tellus felis. Fun fact: Your chances of enjoying this section are lower than winning the lottery!</p>
+        <button class="fun-button" onclick="haveFun()">Click Me for Fun!</button>
+    </div>
+
+    <div class="section" style="background-color: #00f;">
+        <h2 class="agonizing-link">Annoying Section</h2>
+        <p class="agonizing-content">Hover over the button below for an annoying experience! Did you know that 6 out of 7 dwarfs are not happy? Now, let's make you unhappy too. Hover over the button and embrace the annoyance. By the way, the button is feeling lonely, so it appreciates your company. Fun fact: You'll probably forget about this section as soon as you leave. Such is life!</p>
+        <button class="annoying-button" onmouseover="beAnnoying()">Me!</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function annoyUser() {
+            var userName = document.getElementById('name').value;
+            if (userName.trim() !== '') {
+                alert('Hey ' + userName + ', your existence is annoying! 🙃 Did you hear about the guy who invented Lifesavers? He made a mint! Your name probably won\'t make you rich, though.');
+            }
+        }
+
+        function annoy() {
+            alert('You clicked the agonizing button! Did you know that the early bird might get the worm, but the second mouse gets the cheese? You\'re the second mouse!');
+        }
+
+        function haveFun() {
+            alert('Surprise! You just wasted your time! 🎉 Your life is like a broken pencil – pointless.');
+            document.body.style.backgroundColor = '#ffff00'; 
+            document.body.style.color = '#ff0000';
+        }
+
+        function beAnnoying() {
+            alert('You hovered over me! Prepare for annoyance! Did you hear about the guy who broke his left arm and left leg? He\'s all right now!');
+            document.body.style.backgroundColor = '#ff0000'; 
+            document.body.style.color = '#fff'; 
+        }
+
+        function confuse() {
+            alert('You clicked the confusing button! Why did the scarecrow win an award? Because he was outstanding in his field! Now, enjoy the confusion!');
+            document.body.style.backgroundColor = '#ff00ff'; 
+            document.body.style.color = '#00ff00'; 
+        }
+    </script>
+
+</body>
+</html>
