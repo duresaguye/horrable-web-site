@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horrible Design</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <style>
         body {
-            background-color: hsl(0, 100%, 50%);
-            color: #990000;
+            background-color: hwb(302 0% 0%);
+            color: #450099;
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
             animation: blink 1s infinite;
@@ -21,7 +20,7 @@
                 color: #990000;
             }
             50% {
-                color: #00ff00;
+                color: #d9ff00;
             }
         }
 
@@ -101,7 +100,7 @@
             border: 2px solid #f00;
             border-radius: 15px;
             font-size: 20px;
-            background-color: #ffcc00;
+            background-color: hsl(65, 100%, 50%);
             color: #00f;
             animation: bounce 1s infinite;
         }
@@ -116,7 +115,7 @@
         }
 
         .unreadable-content {
-            font-size: 36px;
+            font-size: 56px;
             font-family: 'Courier New', monospace;
             line-height: 1.2;
             animation: flipInX 0.5s infinite;
@@ -160,7 +159,7 @@
 
         .confusing-button {
             background-color: #00f;
-            color: #ffcc00;
+            color: hsl(73, 100%, 50%);
             padding: 10px 20px;
             border: none;
             cursor: pointer;
@@ -217,6 +216,11 @@
             55% {
                 transform: translate(10px, -10px);
             }
+        
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -240,12 +244,15 @@
     </div>
 
     <div class="section" style="background-color: #ffcc00;">
+        <img src="img1.jpg" alt="">
+        
         <h2 class="agonizing-link">More Agonizing Section</h2>
         <p class="agonizing-content unreadable-content">Prepare for an onslaught of unbearable content. Did you know that the early bird might get the worm, but the second mouse gets the cheese? You're the second mouse! This paragraph is intentionally long and painful to read. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <button class="annoying-button" onmouseover="beAnnoying()">click me!</button>
     </div>
 
     <div class="section" style="background-color: #666;">
+        <img src="img3.png" alt="">
         <h2 class="agonizing-link">Endless Confusion Section</h2>
         <p class="agonizing-content unreadable-content">In this section, we've ramped up the confusion. Why did the programmer quit his job? Because he didn't get arrays! Prepare yourself for more mind-boggling content. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque commodo odio vel malesuada interdum.</p>
         <button class="confusing-button" onclick="confuse()">Cilck plz!</button>
@@ -255,12 +262,14 @@
         <h2 class="agonizing-link">Fun Section</h2>
         <p class="agonizing-content">Click the button below for a fun surprise! Did you hear about the cheese factory that exploded? There was nothing left but de-brie. Let's add some fun to your life, or at least what we consider fun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget dolor eu quam feugiat vestibulum. Proin non ligula eu augue pretium bibendum. Nulla facilisi. Vestibulum eu tellus felis. Fun fact: Your chances of enjoying this section are lower than winning the lottery!</p>
         <button class="fun-button" onclick="haveFun()">Click Me for Fun!</button>
+        <img src="img4.jpg" alt="">
     </div>
 
     <div class="section" style="background-color: #00f;">
         <h2 class="agonizing-link">Annoying Section</h2>
         <p class="agonizing-content">Hover over the button below for an annoying experience! Did you know that 6 out of 7 dwarfs are not happy? Now, let's make you unhappy too. Hover over the button and embrace the annoyance. By the way, the button is feeling lonely, so it appreciates your company. Fun fact: You'll probably forget about this section as soon as you leave. Such is life!</p>
-        <button class="annoying-button" onmouseover="beAnnoying()">Me!</button>
+        <button class="annoying-button" onmouseover="beAnnoying()">Cilck Me!</button>
+        <img src="img5.gif" alt="">
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
